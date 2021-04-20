@@ -21,26 +21,30 @@
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
+                <x-jet-label for="password" value="{{ __('Mot de passe') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
                     <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    <span class="ml-2 text-sm text-gray-600">{{ __('Se souvenir de moi') }}</span>
                 </label>
             </div>
-
-            <div class="flex items-center justify-end mt-4">
+            <div class="mt-4">
+                @if (Route::has('register'))
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">S'inscrire</a>
+                @endif
+                <br>
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                        {{ __('J\'ai oublié mon mot de passe :(') }}
                     </a>
                 @endif
-
+            </div>
+            <div class="flex items-center justify-end mt-4">
                 <x-jet-button class="ml-4">
-                    {{ __('Log in') }}
+                    {{ __('Se connecter') }}
                 </x-jet-button>
             </div>
         </form>
