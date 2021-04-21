@@ -26,7 +26,7 @@
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-gray-900  text-white">
+                <header class="bg-yellow-700  text-white">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
@@ -35,6 +35,7 @@
             <!-- Page Content -->
             <main>
                 {{ $slot }}
+
             </main>
         </div>
 
