@@ -1,24 +1,26 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Two Factor Authentication') }}
+        {{ __('Facteur à double authentification') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Add additional security to your account using two factor authentication.') }}
+        {{ __('Ajoutez une sécurité supplémentaire à votre compte en utilisant l\'authentification à deux facteurs.
+') }}
     </x-slot>
 
     <x-slot name="content">
         <h3 class="text-lg font-medium text-gray-900">
             @if ($this->enabled)
-                {{ __('You have enabled two factor authentication.') }}
+                {{ __('Vous avez activé l\'authentification à deux facteurs.') }}
             @else
-                {{ __('You have not enabled two factor authentication.') }}
+                {{ __('Vous n\'avez pas activé l\'authentification à deux facteurs.') }}
             @endif
         </h3>
 
         <div class="mt-3 max-w-xl text-sm text-gray-600">
             <p>
-                {{ __('When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone\'s Google Authenticator application.') }}
+                {{ __('Lorsque l\'authentification à deux facteurs est activée, vous serez invité à saisir un jeton aléatoire et sécurisé lors de l\'authentification. Vous pouvez récupérer ce jeton sur votre téléphone, l\'application Authenticator de Google.
+') }}
             </p>
         </div>
 
@@ -26,11 +28,12 @@
             @if ($showingQrCode)
                 <div class="mt-4 max-w-xl text-sm text-gray-600">
                     <p class="font-semibold">
-                        {{ __('Two factor authentication is now enabled. Scan the following QR code using your phone\'s authenticator application.') }}
+                        {{ __('L\'authentification à deux facteurs est désormais activée. Scannez le code QR suivant à l\'aide de l\'application Authenticator de votre téléphone.
+') }}
                     </p>
                 </div>
 
-                <div class="mt-4 dark:p-4 dark:w-56 dark:bg-white">
+                <div class="mt-4 dark:p-4 dark:w-56 dark:bg-black">
                     {!! $this->user->twoFactorQrCodeSvg() !!}
                 </div>
             @endif
@@ -38,10 +41,10 @@
             @if ($showingRecoveryCodes)
                 <div class="mt-4 max-w-xl text-sm text-gray-600">
                     <p class="font-semibold">
-                        {{ __('Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two factor authentication device is lost.') }}
+                        {{ __('Stockez ces codes de récupération dans un gestionnaire de mots de passe sécurisé. Ils peuvent être utilisés pour récupérer l\'accès à votre compte en cas de perte de votre appareil d\'authentification à deux facteurs.
+') }}
                     </p>
-                </div>
-
+                </div>²
                 <div class="grid gap-1 max-w-xl mt-4 px-4 py-4 font-mono text-sm bg-gray-100 rounded-lg">
                     @foreach (json_decode(decrypt($this->user->two_factor_recovery_codes), true) as $code)
                         <div>{{ $code }}</div>
@@ -54,7 +57,7 @@
             @if (! $this->enabled)
                 <x-jet-confirms-password wire:then="enableTwoFactorAuthentication">
                     <x-jet-button type="button" wire:loading.attr="disabled">
-                        {{ __('Enable') }}
+                        {{ __('Activer') }}
                     </x-jet-button>
                 </x-jet-confirms-password>
             @else
