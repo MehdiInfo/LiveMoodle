@@ -13,16 +13,16 @@
                 <!-- Navigation Links -->
                 <div class="  text-black hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                    <h2 class=" text-yellow-700 leading-tight">
+                    <div class=" text-yellow-700 leading-tight">
                         {{ __('Accueil') }}
-                    </h2>
+                    </div>
                     </x-jet-nav-link>
                 </div>
-                <div class="  text-black hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class=" text-black hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('cours') }}" :active="request()->routeIs('cours')">
-                    <h2 class=" text-yellow-700 leading-tight">
+                    <div class=" text-yellow-700 leading-tight">
                         {{ __('Mes cours') }}
-                    </h2>
+                    </div>
                     </x-jet-nav-link>
                 </div>
             </div>
