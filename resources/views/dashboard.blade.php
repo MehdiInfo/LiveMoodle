@@ -1,9 +1,9 @@
 <x-app-layout>
 <!-- Layout de dashbord -->
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-white leading-tight">
+        <div class="font-semibold text-xl text-white leading-tight">
             {{ __('Accueil') }}
-        </h2>
+</div>
     </x-slot>
 
     <div class="py-12">
