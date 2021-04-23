@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{URL::asset('css/bootstrap.min.css')}}" type="text/css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/styles.css')}}"> 
-    <script type="text/javascript" src="{{URL::asset('\js\scripts.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('\js\scripts.js')}}"></script> 
     <title>Mon chat</title>
 </head>
 
