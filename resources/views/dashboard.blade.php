@@ -6,9 +6,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="{{URL::asset('css/bootstrap.min.css')}}" type="text/css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/styles.css')}}"> 
+    <script type="text/javascript" src="{{URL::asset('\js\scripts.js')}}"></script>
     <title>Mon chat</title>
 </head>
 
@@ -31,7 +32,7 @@
 
     <div class="p-6 sm:px-20 bg-gray-900 border-b border-gray-200">
         <div>
-            <x-jet-application-logo class="block h-12 w-auto" />
+           <x-jet-application-logo class="block h-12 w-auto" /> 
         </div>
 
     <div class="p-2 mt-8 text-2xl text-yellow-700">
