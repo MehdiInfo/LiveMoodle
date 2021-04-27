@@ -20,9 +20,17 @@
             </div>
 
             <div class="mt-4">
+                <label for="Etudiant" >Etudiant</label>
+                <input id="Etudiant" class="radio" type="radio" name="statut" value="Etudiant"  required >
+                <label for="Prof" >Prof</label>
+                <input id="Prof" class="radio" type="radio" name="statut" value="Prof" required >
+            </div>
+            <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Mot de passe') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
+
+
 
             <div class="mt-4">
                 <x-jet-label for="password_confirmation" value="{{ __('Confirmation du mots de passe') }}" />
