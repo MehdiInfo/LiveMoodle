@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{URL::asset('css/bootstrap.min.css')}}" type="text/css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <script type="text/javascript" src="{{URL::asset('\js\scripts.js')}}"></script> 
+    <script type="text/javascript" src="{{URL::asset('\js\scripts.js')}}"></script>
     <title>Mon chat</title>
 </head>
 
@@ -16,11 +16,10 @@
 
 <!-- Layout de dashbord -->
     <x-slot name="header">
-<<<<<<< HEAD
+
         <h2 class="font-semibold text-xl text-white leading-tight" style="text-align: center">
-=======
+
         <div class="font-semibold text-xl text-white leading-tight">
->>>>>>> 03bb1ebee808470f0b9a0ae78843cbe12e1754c1
             {{ __('Accueil') }}
         </div>
     </x-slot>
@@ -28,21 +27,21 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-gray-900 overflow-hidden shadow-xl sm:rounded-lg">
-            
+
              <!--   <x-jet-welcome />-->
 
-      
+
 
     <div class="p-6 sm:px-20 bg-gray-900 border-b border-gray-200">
         <div>
-           <x-jet-application-logo class="block h-12 w-auto" /> 
+           <x-jet-application-logo class="block h-12 w-auto" />
         </div>
 
     <div class="p-2 mt-8 text-2xl text-yellow-700">
           ANNONCES
     </div>
-   
-    
+
+
 <body>
     <section class="container">
         <main class="row">
@@ -60,7 +59,7 @@
         </div>
     </div>
 </div>
-    
+
 
         <div class="ml-12">
             <div class="mt-2 text-sm text-gray-500">
