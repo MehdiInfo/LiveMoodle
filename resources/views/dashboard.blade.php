@@ -17,7 +17,7 @@
 <!-- Layout de dashbord -->
     <x-slot name="header">
 
-        <h2 class="font-semibold text-xl text-white leading-tight" style="text-align: center">
+        <h2 class="font-semibold text-xl text-white leading-tight" style="text-align:left">
 
         <div class="font-semibold text-xl text-white leading-tight">
             {{ __('Accueil') }}
@@ -47,17 +47,19 @@
         <main class="row">
 
         <div class="col-12 my-1">
-            <div class="p-2 h-96 shadow-xl overflow-y-scroll bg-gray-400 border-4 border-gray-500" id="discussion" >
-
+            <div class="p-2 h-96 shadow-xl overflow-y-scroll bg-gray-400 border-4 border-gray-500" id="ANNONCES" >
+            -> Crée le 27/04/2021
         </div>
     </div>
 <div class="col-12 saisie">
+<!--
     <div class="input-group">
         <input type="text" class="form-control" id="texte" placeholder="Entrez votre texte">
         <div class="input-group-append">
             <span class="input-group-text" id="valid"><i class="la la-check"></i></span>
         </div>
     </div>
+    -->
 </div>
 
 

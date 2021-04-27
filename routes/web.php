@@ -33,3 +33,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/Mes_cours', function () {
     return view('cours');
 })->name('cours');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/tchat', function () {
+    return view('tchat');
+})->name('tchat');
+
+
+
