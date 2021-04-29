@@ -17,7 +17,7 @@
 <!-- Layout de dashbord -->
     <x-slot name="header">
 
-        <h2 class="font-semibold text-xl text-white leading-tight" style="text-align:left">
+        <h2 class="font-semibold text-xl text-white leading-tight" style="text-align:center">
 
         <div class="font-semibold text-xl text-white leading-tight">
             {{ __('Accueil') }}

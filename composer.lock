@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a17f3a9456f1516a8ba8cc8192854ce3",
+    "content-hash": "f4ad5ca493bb2a8d7fca3f8f7d0f4c85",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -939,16 +939,16 @@
         },
         {
             "name": "laravel/fortify",
-            "version": "v1.7.10",
+            "version": "v1.7.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/fortify.git",
-                "reference": "82c99b6999f7e89f402cfd7eb4074e619382b3b7"
+                "reference": "b45807430194c73aaa9b2f26cb76038cc747466f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/fortify/zipball/82c99b6999f7e89f402cfd7eb4074e619382b3b7",
-                "reference": "82c99b6999f7e89f402cfd7eb4074e619382b3b7",
+                "url": "https://api.github.com/repos/laravel/fortify/zipball/b45807430194c73aaa9b2f26cb76038cc747466f",
+                "reference": "b45807430194c73aaa9b2f26cb76038cc747466f",
                 "shasum": ""
             },
             "require": {
@@ -994,7 +994,7 @@
                 "auth",
                 "laravel"
             ],
-            "time": "2021-04-13T15:05:45+00:00"
+            "time": "2021-04-27T17:56:34+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1348,6 +1348,60 @@
             "time": "2021-03-02T16:53:12+00:00"
         },
         {
+            "name": "laravel/ui",
+            "version": "v3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "e2478cd0342a92ec1c8c77422553bda8ee004fd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/e2478cd0342a92ec1c8c77422553bda8ee004fd0",
+                "reference": "e2478cd0342a92ec1c8c77422553bda8ee004fd0",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^8.0",
+                "illuminate/filesystem": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "time": "2021-04-27T18:17:41+00:00"
+        },
+        {
             "name": "league/commonmark",
             "version": "1.5.8",
             "source": {
@@ -1545,16 +1599,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v2.4.3",
+            "version": "v2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "69575f50bb7f8a49a41f9bd6bd16c73a6ef4fda3"
+                "reference": "33101c83b75728651b9e668a4559f97def7c9138"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/69575f50bb7f8a49a41f9bd6bd16c73a6ef4fda3",
-                "reference": "69575f50bb7f8a49a41f9bd6bd16c73a6ef4fda3",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/33101c83b75728651b9e668a4559f97def7c9138",
+                "reference": "33101c83b75728651b9e668a4559f97def7c9138",
                 "shasum": ""
             },
             "require": {
@@ -1603,7 +1657,7 @@
                 }
             ],
             "description": "A front-end framework for Laravel.",
-            "time": "2021-04-16T14:27:45+00:00"
+            "time": "2021-04-28T15:31:15+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",

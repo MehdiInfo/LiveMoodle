@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-gray-400   "> 
+<nav x-data="{ open: false }" class="bg-gray-400   ">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -26,7 +26,7 @@
                     </x-jet-nav-link>
                 </div>
 
-                
+
                 <div class=" text-black hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('tchat') }}" :active="request()->routeIs('cours')">
                     <div class=" text-yellow-700 leading-tight">
@@ -34,8 +34,20 @@
                     </div>
                     </x-jet-nav-link>
                 </div>
+                @php
+                $Utilisateur = Auth::user()->statut;
+                @endphp
+                @if ($Utilisateur == 'Prof')
 
 
+                <div class=" text-black hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('prof.users.index') }}">
+                    <div class=" text-yellow-700 leading-tight">
+                        {{ __('Gestion des Etudiants') }}
+                    </div>
+                    </x-jet-nav-link>
+                </div>
+                @endif
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
