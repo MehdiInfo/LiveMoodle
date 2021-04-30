@@ -4,16 +4,22 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\User;
-
+use Livewire\WithPagination;
 class Users extends Component
 {
-    public $users, $name, $email, $user_id, $password, $statut;
+    public $name, $email, $user_id, $password, $statut;
+    protected $users;
     public $updateMode = false;
+    use WithPagination;
+    public $searchTerm;
 
     public function render()
     {
-        $this->users = User::all();
-        return view('livewire.users');
+        $searchTerm = '%'.$this->searchTerm.'%';
+        $this->users = User::where('statut', 'Etudiant');
+        return view('livewire.users',[
+            'users' => User::where('statut', 'Etudiant')->where('name','like', $searchTerm)->paginate(10)
+        ]);
     }
 
     private function resetInputFields(){
@@ -28,13 +34,13 @@ class Users extends Component
         $validatedDate = $this->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'password' => 'required|password',
+            'password' => 'required',
             'statut' => 'required',
         ]);
 
         User::create($validatedDate);
 
-        session()->flash('message', 'Etudiant rajouter !');
+        session()->flash('message', 'Etudiant rajouté !');
 
         $this->resetInputFields();
 
@@ -74,7 +80,7 @@ class Users extends Component
                 'email' => $this->email,
             ]);
             $this->updateMode = false;
-            session()->flash('message', 'Etudiant modifier  !');
+            session()->flash('message', 'Etudiant modifié  !');
             $this->resetInputFields();
 
         }
@@ -84,7 +90,7 @@ class Users extends Component
     {
         if($id){
             User::where('id',$id)->delete();
-            session()->flash('message', 'Etudiant Supprimer !');
+            session()->flash('message', 'Etudiant Supprimé !');
         }
     }
 }

@@ -41,3 +41,7 @@ Route::namespace('Prof')->prefix('prof')->name('prof.')->group(function(){
 });
 
 Route::view('users','livewire.home');
+
+Route::get('/search-box', function () {
+    return view('searchbox');
+});
