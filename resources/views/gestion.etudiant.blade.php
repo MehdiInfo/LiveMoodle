@@ -1,7 +1,7 @@
 <x-app-layout>
     <!-- Layout de dashbord -->
         <x-slot name="header">
-            <h2 class="font-semibold text-xl text-white leading-tight" style="text-align: left">
+        <div class="font-semibold text-xl text-red-600 leading-tight">
                 {{ __('Gestion des étudiants') }}
             </h2>
         </x-slot>

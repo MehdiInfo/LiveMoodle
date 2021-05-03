@@ -16,17 +16,17 @@
         <h2 class="font-semibold text-xl text-white leading-tight" style="text-align:center">
 
         <div class="font-semibold text-xl text-white leading-tight">
-            {{ __('Gestion des utilisateur') }}
+            {{ __('Gestion des utilisateurs') }}
         </div>
     </x-slot>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header bg-gray-500">
                         <h2 style="text-align: center">Gestion des étudiants</h2>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body bg-gray-300">
                         @if (session()->has('message'))
                             <div class="alert alert-success">
                                 {{ session('message') }}

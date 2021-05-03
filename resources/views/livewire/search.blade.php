@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12">
 
-            <input type="text"  class="form-control" placeholder="Search" wire:model="searchTerm" />
+            <input type="text"  class="form-control" placeholder="Rechercher un..." />
 
             <table class="table table-bordered" style="margin: 10px 0 10px 0;">
                 <tr>

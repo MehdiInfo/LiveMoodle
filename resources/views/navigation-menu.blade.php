@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-gray-400   ">
+<nav x-data="{ open: false }" class="bg-gray-800   ">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -13,25 +13,35 @@
                 <!-- Navigation Links -->
                 <div class="  text-black hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                    <div class=" text-yellow-700 leading-tight">
+                    
+                    <div class=" text-gray-500 leading-tight">
                         {{ __('Accueil') }}
                     </div>
                     </x-jet-nav-link>
                 </div>
+
+
                 <div class=" text-black hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+
                     <x-jet-nav-link href="{{ route('cours') }}" :active="request()->routeIs('cours')">
-                    <div class=" text-yellow-700 leading-tight">
+
+                    <div class=" text-gray-500 leading-tight">
                         {{ __('Mes cours') }}
                     </div>
+
                     </x-jet-nav-link>
+
                 </div>
 
 
                 <div class=" text-black hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('tchat') }}" :active="request()->routeIs('cours')">
-                    <div class=" text-yellow-700 leading-tight">
+
+                    <x-jet-nav-link href="{{ route('tchat') }}" :active="request()->routeIs('tchat')">
+
+                    <div class=" text-gray-500 leading-tight">
                         {{ __('Tchat') }}
                     </div>
+
                     </x-jet-nav-link>
                 </div>
                 @php
@@ -42,7 +52,7 @@
 
                 <div class=" text-black hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('prof.users.index') }}">
-                    <div class=" text-yellow-700 leading-tight">
+                    <div class=" text-gray-500 leading-tight">
                         {{ __('Gestion des Etudiants') }}
                     </div>
                     </x-jet-nav-link>
@@ -57,7 +67,7 @@
                         <x-jet-dropdown align="right" width="60">
                             <x-slot name="trigger">
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-white text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-red-500 text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:bg-gray-500 hover:text-gray-700 focus:outline-none focus:bg-gray-500 active:bg-gray-500 transition">
                                         {{ Auth::user()->currentTeam->name }}
 
                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -69,12 +79,15 @@
 
                             <x-slot name="content">
                                 <div class="w-60">
+
                                     <!-- Team Management -->
+
                                     <div class="block px-4 py-2 text-xs text-gray-400">
                                         {{ __('Manage Team') }}
                                     </div>
 
                                     <!-- Team Settings -->
+
                                     <x-jet-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
                                         {{ __('Team Settings') }}
                                     </x-jet-dropdown-link>
@@ -85,7 +98,6 @@
                                         </x-jet-dropdown-link>
                                     @endcan
 
-                                    <div class="border-t border-gray-100"></div>
 
                                     <!-- Team Switcher -->
                                     <div class="block px-4 py-2 text-xs text-gray-400">
@@ -95,6 +107,7 @@
                                     @foreach (Auth::user()->allTeams() as $team)
                                         <x-jet-switchable-team :team="$team" />
                                     @endforeach
+
                                 </div>
                             </x-slot>
                         </x-jet-dropdown>
@@ -111,7 +124,7 @@
                                 </button>
                             @else
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-gray-900 text-sm leading-4 font-medium rounded-md text-gray-900 bg-yellow-700	 hover:text-gray-700 focus:outline-none transition">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-gray-900 text-sm leading-4 font-medium rounded-md text-gray-900 bg-gray-300	 hover:text-gray-700 focus:outline-none transition">
                                         {{ Auth::user()->name }}
 
                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -138,7 +151,6 @@
                                 </x-jet-dropdown-link>
                             @endif
 
-                            <div class="border-t border-gray-100"></div>
 
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
@@ -173,7 +185,25 @@
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
-        </div>
+
+
+            <x-jet-responsive-nav-link href="{{ route('cours') }}" :active="request()->routeIs('cours')">
+                {{ __('Mes cours') }}
+            </x-jet-responsive-nav-link>
+
+            <x-jet-responsive-nav-link href="{{ route('tchat') }}" :active="request()->routeIs('tchat')">
+                {{ __('Tchat') }}
+            </x-jet-responsive-nav-link>
+
+
+
+            <x-jet-responsive-nav-link href="{{ route('prof.users.index') }}" :active="request()->routeIs('prof.users.index')">
+                {{ __('Gestion des Etudiants') }}
+            </x-jet-responsive-nav-link>
+
+            
+
+    </div>
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">

@@ -1,7 +1,8 @@
-<x-app-layout>
+<x-app-layout >
     <!-- Layout de dashbord -->
+    
         <x-slot name="header">
-            <h2 class="font-semibold text-xl text-white leading-tight" style="text-align: left">
+        <div class="font-semibold text-xl text-gray-300 leading-tight">
                 {{ __('Tchat en ligne') }}
             </h2>
         </x-slot>

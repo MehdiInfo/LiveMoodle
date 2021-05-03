@@ -1,5 +1,5 @@
 <div class="col text-center">
-<button type="button" class="btn btn-primary" style="" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-secondary" style="" data-toggle="modal" data-target="#exampleModal">
 	Ajouter un étudiant
 </button>
 </div>

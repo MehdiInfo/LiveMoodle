@@ -17,9 +17,9 @@
 <!-- Layout de dashbord -->
     <x-slot name="header">
 
-        <h2 class="font-semibold text-xl text-white leading-tight" style="text-align:center">
+        <h2 class="font-semibold text-xl text-white leading-tight" style="text-align:left">
 
-        <div class="font-semibold text-xl text-white leading-tight">
+        <div class="font-semibold text-xl text-gray-300 leading-tight">
             {{ __('Accueil') }}
         </div>
     </x-slot>
@@ -37,7 +37,7 @@
            <x-jet-application-logo class="block h-12 w-auto" />
         </div>
 
-    <div class="p-2 mt-8 text-2xl text-yellow-700">
+    <div class="p-2 mt-8 text-2xl text-gray-300">
           ANNONCES
     </div>
 

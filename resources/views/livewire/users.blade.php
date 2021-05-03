@@ -22,6 +22,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                    
                         @foreach($users as $value)
                         <tr>
                             <td>{{ $value->id }}</td>
@@ -29,7 +30,7 @@
                             <td>{{ $value->email }}</td>
                             <td>S4F5A</td>
                             <td>
-                            <button data-toggle="modal" data-target="#updateModal" wire:click="edit({{ $value->id }})" class="btn btn-primary btn-sm">Modifier</button>
+                            <button data-toggle="modal" data-target="#updateModal" wire:click="edit({{ $value->id }})" class="btn btn-secondary btn-sm">Modifier</button>
                             <button wire:click="delete({{ $value->id }})" class="btn btn-danger btn-sm">Supprimer</button>
                             </td>
                         </tr>
