@@ -4,10 +4,11 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\User;
+use App\Models\Classe;
 use Livewire\WithPagination;
 class Users extends Component
 {
-    public $name, $email, $user_id, $password, $statut;
+    public $name, $email, $user_id, $password, $statut,$Classe_id;
     protected $users;
     public $updateMode = false;
     use WithPagination;
@@ -23,10 +24,12 @@ class Users extends Component
     }
 
     private function resetInputFields(){
+        $this->classe = '';
         $this->name = '';
         $this->email = '';
         $this->password = '';
         $this->statut = '';
+        $this->Classe_id = '';
     }
 
     public function store()
@@ -36,6 +39,7 @@ class Users extends Component
             'email' => 'required|email',
             'password' => 'required',
             'statut' => 'required',
+            'Classe_id' => 'required',
         ]);
 
         User::create($validatedDate);
@@ -55,7 +59,7 @@ class Users extends Component
         $this->user_id = $id;
         $this->name = $user->name;
         $this->email = $user->email;
-
+        $this->Classe_id = $user->Classe_id;
     }
 
     public function cancel()
@@ -70,6 +74,7 @@ class Users extends Component
     {
         $validatedDate = $this->validate([
             'name' => 'required',
+            'Classe_id' => 'required',
             'email' => 'required|email',
         ]);
 
@@ -77,6 +82,7 @@ class Users extends Component
             $user = User::find($this->user_id);
             $user->update([
                 'name' => $this->name,
+                'Classe_id' => $this->Classe_id,
                 'email' => $this->email,
             ]);
             $this->updateMode = false;
