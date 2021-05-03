@@ -24,5 +24,8 @@ class ClasseSeeder extends Seeder
         Classe::create([
             'title' => 'S4F5C',
         ]);
+        Classe::create([
+            'title' => 'Aucun',
+        ]);
     }
 }
