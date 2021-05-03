@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Prof;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;;
 
 class UsersController extends Controller
@@ -14,9 +15,17 @@ class UsersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     {
+        $Utilisateur = Auth::user()->statut;
         $Users = User::where('statut','etudiant')->get();
-        return view('livewire.home')->with('users', $Users);
+        if($Utilisateur == 'Prof'){
+            return view('livewire.home')->with('users', $Users);
+        }
+        else{
+            return view('dashboard');
+        }
+
     }
 
     /**

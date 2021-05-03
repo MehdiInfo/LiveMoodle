@@ -24,8 +24,8 @@ class UsersTableSeeder extends Seeder
             'name' => 'Rabat',
             'email' => 'prof@prof.com',
             'password' => Hash::make('password'),
-            'statut' => 'Prof'
-
+            'statut' => 'Prof',
+            'Classe_id' => '1',
         ]);
         $etudiant = User::create([
             'name' => 'Mehdi',

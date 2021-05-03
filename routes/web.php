@@ -39,9 +39,3 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/tchat', function () {
 Route::namespace('Prof')->prefix('prof')->name('prof.')->group(function(){
     Route::resource('users','\App\Http\Controllers\Prof\UsersController');
 });
-
-Route::view('users','livewire.home');
-
-Route::get('/search-box', function () {
-    return view('searchbox');
-});
