@@ -19,11 +19,14 @@
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
-            <div class="mt-4">
+            <div class="mt-4 text-gray-600">
                 <label for="Etudiant" >Etudiant</label>
                 <input id="Etudiant" class="radio" type="radio" name="statut" value="Etudiant"  required >
+            </div>
+            <div class="mt-4 text-gray-600">
                 <label for="Prof" >Prof</label>
                 <input id="Prof" class="radio" type="radio" name="statut" value="Prof" required >
+                
             </div>
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Mot de passe') }}" />
@@ -56,7 +59,7 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('vous avez déja un compte ?') }}
+                    {{ __('Vous avez déjà un compte ?') }}
                 </a>
 
                 <x-jet-button class="ml-4">
