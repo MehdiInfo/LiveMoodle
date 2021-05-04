@@ -53,7 +53,7 @@
                 <div class=" text-black hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('prof.users.index') }}">
                     <div class=" text-gray-500 leading-tight">
-                        {{ __('Gestion des Etudiants') }}
+                        {{ __('Gestion des étudiants') }}
                     </div>
                     </x-jet-nav-link>
                 </div>
@@ -182,6 +182,7 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
+
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
@@ -194,13 +195,18 @@
             <x-jet-responsive-nav-link href="{{ route('tchat') }}" :active="request()->routeIs('tchat')">
                 {{ __('Tchat') }}
             </x-jet-responsive-nav-link>
-
-
+            @php
+                $Utilisateur = Auth::user()->statut;
+                @endphp
+                @if ($Utilisateur == 'Prof')
 
             <x-jet-responsive-nav-link href="{{ route('prof.users.index') }}" :active="request()->routeIs('prof.users.index')">
-                {{ __('Gestion des Etudiants') }}
+                {{ __('Gestion des étudiants') }}
             </x-jet-responsive-nav-link>
 
+            @endif
+
+      
             
 
     </div>
