@@ -33,9 +33,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/Mes_cours', function () {
     return view('cours');
 })->name('cours');
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/tchat', function () {
     return view('tchat');
 })->name('tchat');
+
 Route::namespace('Prof')->prefix('prof')->name('prof.')->group(function(){
     Route::resource('users','\App\Http\Controllers\Prof\UsersController');
 });
+
+
