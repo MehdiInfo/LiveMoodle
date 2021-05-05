@@ -1,0 +1,15 @@
+https://medium.com/@zachvv11/building-a-real-time-chat-application-with-laravel-and-larasocket-c3e377537dc2
+https://www.youtube.com/watch?v=l44IF9fBNOs&t=170s
+https://www.youtube.com/watch?v=XAyaT6Zbl-U&list=PLeeuvNW2FHVh0VXiYgOtYrtvo8_VS0Z86
+https://www.youtube.com/watch?v=CkRGJC0ytdU&t=530s
+https://www.youtube.com/watch?v=kl8F7HWGNH4&t=628s
+https://laravel.sillo.org/laravel-8/
+https://maurice-chavelli.developpez.com/tutoriels/laravel-5-5/les-bases/?page=un-environnement-de-developpement
+https://www.youtube.com/watch?v=7kFd5lU1eTA
+pusher !
+https://www.youtube.com/watch?v=FYqDsN9hUZk important !
+
+/// Commandes :
+php artisan migrate
+php artisan DB:seed
+composer install
