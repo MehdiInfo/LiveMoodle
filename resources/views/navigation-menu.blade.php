@@ -195,6 +195,7 @@
             <x-jet-responsive-nav-link href="{{ route('tchat') }}" :active="request()->routeIs('tchat')">
                 {{ __('Tchat') }}
             </x-jet-responsive-nav-link>
+            
             @php
                 $Utilisateur = Auth::user()->statut;
                 @endphp
