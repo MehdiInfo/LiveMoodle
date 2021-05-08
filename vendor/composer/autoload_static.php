@@ -36,8 +36,8 @@ class ComposerStaticInitc2e0624e45cb8de6b5c5308cbd5ccc2f
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
-        '40275907c8566c390185147049ef6e5d' => __DIR__ . '/..' . '/livewire/livewire/src/helpers.php',
         'a1af1fc0cffb5f61cbaf64dbe030fdb9' => __DIR__ . '/..' . '/laravel/legacy-factories/helpers.php',
+        '40275907c8566c390185147049ef6e5d' => __DIR__ . '/..' . '/livewire/livewire/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -588,6 +588,7 @@ class ComposerStaticInitc2e0624e45cb8de6b5c5308cbd5ccc2f
         'App\\Http\\Controllers\\Admin\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/UsersController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\Prof\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/Prof/UsersController.php',
+        'App\\Http\\Controllers\\VotreClasse' => __DIR__ . '/../..' . '/app/Http/Controllers/VotreClasse.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Livewire\\Chat' => __DIR__ . '/../..' . '/app/Http/Livewire/Chat.php',
         'App\\Http\\Livewire\\Search' => __DIR__ . '/../..' . '/app/Http/Livewire/Search.php',
@@ -601,6 +602,8 @@ class ComposerStaticInitc2e0624e45cb8de6b5c5308cbd5ccc2f
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Classe' => __DIR__ . '/../..' . '/app/Models/Classe.php',
+        'App\\Models\\Exercice' => __DIR__ . '/../..' . '/app/Models/Exercice.php',
+        'App\\Models\\Question' => __DIR__ . '/../..' . '/app/Models/Question.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -785,6 +788,7 @@ class ComposerStaticInitc2e0624e45cb8de6b5c5308cbd5ccc2f
         'DASPRiD\\Enum\\Exception\\UnserializeNotSupportedException' => __DIR__ . '/..' . '/dasprid/enum/src/Exception/UnserializeNotSupportedException.php',
         'DASPRiD\\Enum\\NullValue' => __DIR__ . '/..' . '/dasprid/enum/src/NullValue.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
+        'Database\\Seeders\\ClasseSeeder' => __DIR__ . '/../..' . '/database/seeders/ClasseSeeder.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'Database\\Seeders\\RolesTableSeeder' => __DIR__ . '/../..' . '/database/seeders/RolesTableSeeder.php',
         'Database\\Seeders\\UsersTableSeeder' => __DIR__ . '/../..' . '/database/seeders/UsersTableSeeder.php',
@@ -3199,6 +3203,7 @@ class ComposerStaticInitc2e0624e45cb8de6b5c5308cbd5ccc2f
         'Livewire\\Exceptions\\BypassViewHandler' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/BypassViewHandler.php',
         'Livewire\\Exceptions\\CannotBindToModelDataWithoutValidationRuleException' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/CannotBindToModelDataWithoutValidationRuleException.php',
         'Livewire\\Exceptions\\CannotUseReservedLivewireComponentProperties' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/CannotUseReservedLivewireComponentProperties.php',
+        'Livewire\\Exceptions\\ComponentAttributeMissingOnDynamicComponentException' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/ComponentAttributeMissingOnDynamicComponentException.php',
         'Livewire\\Exceptions\\ComponentNotFoundException' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/ComponentNotFoundException.php',
         'Livewire\\Exceptions\\CorruptComponentPayloadException' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/CorruptComponentPayloadException.php',
         'Livewire\\Exceptions\\DirectlyCallingLifecycleHooksNotAllowedException' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/DirectlyCallingLifecycleHooksNotAllowedException.php',
