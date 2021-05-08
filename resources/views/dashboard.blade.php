@@ -35,7 +35,6 @@
 
 
 <a href="Mes_cours">
-
 <button class="bg-gray-500 opacity-25 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-2 border-t-2 border-l-2 border-grey-700 hover:opacity-100  rounded absolute inset-y-1/3 right-px h-96 w-15 ">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -44,14 +43,11 @@
 </a>
     <div class="py-12">
 
-   
-
-
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-gray-900 overflow-hidden shadow-xl sm:rounded-lg">
 
              <!--   <x-jet-welcome />-->
-
+    
 
 
     <div class="p-6 sm:px-20 bg-gray-900 border-b border-gray-500">
@@ -74,19 +70,28 @@
         </div>
     </div>
 <div class="col-12 saisie">
-<!--
+
+@php
+                $Utilisateur = Auth::user()->statut;
+                @endphp
+                @if ($Utilisateur == 'Prof')
+
     <div class="input-group">
-        <input type="text" class="form-control" id="texte" placeholder="Entrez votre texte">
+        <input wire:model="message" type="text" class="form-control" id="texte" placeholder="Entrez une nouvelle annonce visible par tous les internautes...">
         <div class="input-group-append">
-            <span class="input-group-text" id="valid"><i class="la la-check"></i></span>
+            <span class="input-group-text" id="valid">  <i class="la la-check"></i></span>
         </div>
     </div>
-    -->
+
+
+    
+@endif
 </div>
 
 
         <div class="ml-12">
             <div class="mt-2 text-sm text-gray-500">
+        
             </div>
         </div>
     </div>
