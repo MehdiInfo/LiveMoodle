@@ -26,7 +26,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header bg-gray-500">
-                        <h2 style="text-align: center">Gestion des étudiants</h2>
+                        <h2 style="text-align: center">Gestion des étudiants de {{Auth::user()->etablissement->title}}</h2>
                     </div>
                     <div class="card-body bg-gray-300">
                         @if (session()->has('message'))
