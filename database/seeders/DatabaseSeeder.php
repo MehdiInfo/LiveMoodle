@@ -16,7 +16,13 @@ class DatabaseSeeder extends Seeder
         $this->call(RolesTableSeeder::class);
         $this->call(UsersTableSeeder::class);
         $this->call(ClasseSeeder::class);
+        $this->call(EtablissementSeeder::class);
         // \App\Models\User::factory(10)->create();
-        \App\Models\User::factory()->count(30)->create();
+        \App\Models\User::factory()->count(15)->create([
+            'Etab_id' => 1,
+        ]);
+        \App\Models\User::factory()->count(15)->create([
+            'Etab_id' => 2,
+        ]);
     }
 }

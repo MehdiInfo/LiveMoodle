@@ -32,6 +32,16 @@
                         @error('password') <span class="text-danger error">{{ $message }}</span>@enderror
                     </div>
                     <div class="form-group">
+                        <label for="exampleFormControlInput4">Groupe</label>
+                        <select name="Classe_id" wire:model="Classe_id" class="form-control" id="exampleFormControlInput4">
+                            <option value="4">Aucun groupe</option>
+                            <option value="1">S4F5A</option>
+                            <option value="2">S4F5B</option>
+                            <option value="3">S4F5C</option>
+                        </select>
+                        @error('password') <span class="text-danger error">{{ $message }}</span>@enderror
+                    </div>
+                    <div class="form-group">
                         <label for="Etudiant" >Etudiant</label>
                         <input id="Etudiant" class="radio" type="radio" name="statut" value="Etudiant" wire:model="statut"  required >
                         <label for="Prof" >Prof</label>

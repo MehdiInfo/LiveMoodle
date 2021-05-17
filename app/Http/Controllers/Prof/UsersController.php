@@ -17,6 +17,9 @@ class UsersController extends Controller
     public function index()
 
     {
+        if(Auth::guest()){
+            return view('auth.login');
+        }
         $Utilisateur = Auth::user()->statut;
         $Users = User::where('statut','etudiant')->get();
         if($Utilisateur == 'Prof'){

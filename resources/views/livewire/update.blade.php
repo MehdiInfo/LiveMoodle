@@ -12,17 +12,18 @@
                     <div class="form-group">
                         <input type="hidden" wire:model="user_id">
                         <label for="exampleFormControlInput1">Nom</label>
-                        <input type="text" class="form-control" wire:model="name" id="exampleFormControlInput1" placeholder="Enter Name">
+                        <input type="text" class="form-control" wire:model="name" id="exampleFormControlInput1" placeholder="Saissir Nom">
                         @error('name') <span class="text-danger">{{ $message }}</span>@enderror
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput2">Adresse Email</label>
-                        <input type="email" class="form-control" wire:model="email" id="exampleFormControlInput2" placeholder="Enter Email">
+                        <input type="email" class="form-control" wire:model="email" id="exampleFormControlInput2" placeholder="Entrer C">
                         @error('email') <span class="text-danger">{{ $message }}</span>@enderror
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput3">Choisissez le groupe</label>
                         <select name="Classe_id" wire:model="Classe_id" class="form-control" id="exampleFormControlInput3">
+                            <option value="4">Aucun groupe</option>
                             <option value="1">S4F5A</option>
                             <option value="2">S4F5B</option>
                             <option value="3">S4F5C</option>

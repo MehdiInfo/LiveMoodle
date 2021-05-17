@@ -6,9 +6,10 @@ use Livewire\Component;
 use App\Models\User;
 use App\Models\Classe;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\Auth;
 class Users extends Component
 {
-    public $name, $email, $user_id, $password, $statut,$Classe_id;
+    public $name, $email, $user_id, $password, $statut,$Classe_id,$etab_prof;
     protected $users;
     public $updateMode = false;
     use WithPagination;
@@ -16,10 +17,11 @@ class Users extends Component
 
     public function render()
     {
+        $etab_prof = Auth::user()->Etab_id;
         $searchTerm = '%'.$this->searchTerm.'%';
         $this->users = User::where('statut', 'Etudiant');
         return view('livewire.users',[
-            'users' => User::where('statut', 'Etudiant')->where('name','like', $searchTerm)->paginate(10)
+            'users' => User::where('Etab_id', $etab_prof)->where('statut', 'Etudiant')->where('name','like', $searchTerm)->paginate(10)
         ]);
     }
 

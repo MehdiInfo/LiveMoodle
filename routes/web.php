@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Livewire;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,5 +42,3 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/tchat', function () {
 Route::namespace('Prof')->prefix('prof')->name('prof.')->group(function(){
     Route::resource('users','\App\Http\Controllers\Prof\UsersController');
 });
-
-

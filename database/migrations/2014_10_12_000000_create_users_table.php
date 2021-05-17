@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('statut')->default('Etudiant');
             $table->rememberToken();
             $table->unsignedBigInteger('Classe_id')->default('4');
+            $table->unsignedBigInteger('Etab_id')->nullable();
             $table->foreignId('current_team_id')->nullable();
             $table->text('profile_photo_path')->nullable();
             $table->timestamps();

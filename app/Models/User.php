@@ -29,6 +29,7 @@ class User extends Authenticatable
         'password',
         'statut',
         'Classe_id',
+        'Etab_id',
     ];
 
     /**
@@ -65,5 +66,8 @@ class User extends Authenticatable
     }
     public function classe(){
         return $this->belongsto('App\Models\Classe','Classe_id','id');
+    }
+    public function etablissement(){
+        return $this->belongsto('App\Models\etablissement','Etab_id','id');
     }
 }

@@ -22,7 +22,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    
+
                         @foreach($users as $value)
                         <tr>
                             <td>{{ $value->id }}</td>
@@ -30,8 +30,8 @@
                             <td>{{ $value->email }}</td>
                             <?php
                                 switch($value->Classe_id){
-                                    case 0: ?>
-                                    <td> Sans groupe</td>
+                                    case 4: ?>
+                                    <td> Aucun groupe</td>
                                     <?php break; ?>
                                     <?php case 1: ?>
                                     <td>S4F5A</td>
@@ -54,7 +54,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                {{ $users->links('vendor.pagination.tailwind') }}
+                {{ $users->links() }}
             </div>
         </div>
     </div>
