@@ -17,10 +17,11 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersTableSeeder::class);
         $this->call(ClasseSeeder::class);
 
-        $this->call(EtablissementSeeder::class);
-        $this->call([
-            ChatRoomSeeder::class
-        ]);
+        /**$this->call(EtablissementSeeder::class);
+        *<--$this->call([
+        *    ChatRoomSeeder::class
+        ]);*/
+        $this->call(QuestionSeeder::class);
 
 
         // \App\Models\User::factory(10)->create();
@@ -30,5 +31,6 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory()->count(15)->create([
             'Etab_id' => 2,
         ]);
+        \App\Models\Question::factory()->count(5)->create();
     }
 }

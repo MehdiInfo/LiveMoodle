@@ -17,6 +17,7 @@ class CreateExercicesTable extends Migration
             $table->id();
             $table->string('categorie');
             $table->string('nb_question');
+            $table->string('Cls_id');
             $table->timestamps();
         });
     }

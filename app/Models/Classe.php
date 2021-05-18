@@ -14,4 +14,7 @@ class Classe extends Model
     public function users(){
         return $this->hasMany('App\Models\User', 'id','Classe_id');
     }
+    public function exercices(){
+        return $this->hasmany('App\Models\User','id','Cls_id');
+    }
 }

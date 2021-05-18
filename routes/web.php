@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\Questions\QuestionController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Livewire;
+use Illuminate\Http\RedirectResponse;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +45,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/tchat', function () {
 Route::namespace('Prof')->prefix('prof')->name('prof.')->group(function(){
     Route::resource('users','\App\Http\Controllers\Prof\UsersController');
 });
+Route::get('/Question', 'App\Http\Controllers\QuestionController@index')->name('Question');
