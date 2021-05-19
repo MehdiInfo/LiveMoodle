@@ -30,16 +30,16 @@
                             <td>{{ $value->email }}</td>
                             <?php
                                 switch($value->Classe_id){
-                                    case 4: ?>
+                                    case 3: ?>
                                     <td> Aucun groupe</td>
                                     <?php break; ?>
-                                    <?php case 1: ?>
+                                    <?php case 0: ?>
                                     <td>S4F5A</td>
                                     <?php break; ?>
-                                    <?php case 2: ?>
+                                    <?php case 1: ?>
                                     <td> S4F5B</td>
                                     <?php break; ?>
-                                    <?php case 3: ?>
+                                    <?php case 2: ?>
                                     <td>S4F5C</td>
                                     <?php break; ?>
                                     <?php

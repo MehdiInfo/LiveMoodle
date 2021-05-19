@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Question;
+use App\Models\Cours;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Exercice;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Classe;
 
-class QuestionController extends Controller
+class CoursController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,15 +20,15 @@ class QuestionController extends Controller
     public function index()
     {
         if(Auth::user()->statut == "Prof"){
-            $qst = Question::all();
-            return view('Questions.index', compact('qst'));
+            $Cours = Cours::all();
+            $groupes = Classe::get('title')->all();
+            return view('cours', compact ('Cours', 'groupes'));
+
         }
        else{
-            $id = Auth::user()->Classe_id->title;
-            $exer = Exercice::id()->where('CLs_id', $id)->id()->get();
-            $qst = Question::where('id', $exer)->get();
-            return view('Questions.index', compact('qst'));
-        }
+        $c_user = Auth::user()->Classe_id;
+        $Cours = Cours::where('Cls_id', $c_user)->get();
+        return view('cours', compact ('Cours'));}
 
     }
 
@@ -38,8 +39,7 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        $qst = Question::all();
-        return view('questions.index', compact('qst'));
+        //
     }
 
     /**
@@ -56,10 +56,10 @@ class QuestionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Question  $question
+     * @param  \App\Models\Cours  $cours
      * @return \Illuminate\Http\Response
      */
-    public function show(Question $question)
+    public function show(Cours $cours)
     {
         //
     }
@@ -67,10 +67,10 @@ class QuestionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Question  $question
+     * @param  \App\Models\Cours  $cours
      * @return \Illuminate\Http\Response
      */
-    public function edit(Question $question)
+    public function edit(Cours $cours)
     {
         //
     }
@@ -79,10 +79,10 @@ class QuestionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Question  $question
+     * @param  \App\Models\Cours  $cours
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Question $question)
+    public function update(Request $request, Cours $cours)
     {
         //
     }
@@ -90,10 +90,10 @@ class QuestionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Question  $question
+     * @param  \App\Models\Cours  $cours
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Question $question)
+    public function destroy(Cours $cours)
     {
         //
     }

@@ -18,20 +18,24 @@
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
-
             <div class="mt-4 text-gray-600">
                 <label for="Etudiant" >Etudiant</label>
                 <input id="Etudiant" class="radio" type="radio" name="statut" value="Etudiant"  required >
-            </div>
-            <div class="mt-4 text-gray-600">
                 <label for="Prof" >Prof</label>
-                <input id="Prof" class="radio" type="radio" name="statut" value="Prof" required >
-                
+                <input id="Prof" class="radio" type="radio" name="statut" value="Prof"  required >
+            </div>
+            <div class="mt-4">
+                <label for="exampleFormControlInput4">Etablisement</label>
+                <select name="Etab_id"class="form-control" id="exampleFormControlInput4" required>
+                            <option value="1" >Urca</option>
+                            <option value="2">SciencePo</option>
+                </select>
             </div>
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Mot de passe') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
+
 
 
 

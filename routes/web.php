@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Questions\QuestionController;
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\CoursController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Livewire;
@@ -33,10 +34,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::resource('/Mes_cours', CoursController::class)->names([
+        'index' => 'cours'
+    ]);
+});
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/Mes_cours', function () {
-    return view('cours');
-})->name('cours');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/tchat', function () {
     return view('tchat');
@@ -45,4 +48,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/tchat', function () {
 Route::namespace('Prof')->prefix('prof')->name('prof.')->group(function(){
     Route::resource('users','\App\Http\Controllers\Prof\UsersController');
 });
-Route::get('/Question', 'App\Http\Controllers\QuestionController@index')->name('Question');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::resource('question', QuestionController::class)->names([
+        'index' => 'Question'
+    ]);
+});

@@ -26,7 +26,6 @@ class Users extends Component
     }
 
     private function resetInputFields(){
-        $this->classe = '';
         $this->name = '';
         $this->email = '';
         $this->password = '';
@@ -36,6 +35,7 @@ class Users extends Component
 
     public function store()
     {
+        $etab = Auth::user()->Etab_id;
         $validatedDate = $this->validate([
             'name' => 'required',
             'email' => 'required|email',
@@ -43,7 +43,7 @@ class Users extends Component
             'statut' => 'required',
             'Classe_id' => 'required',
         ]);
-
+        $validatedDate['Etab_id']= $etab;
         User::create($validatedDate);
 
         session()->flash('message', 'Etudiant rajouté !');

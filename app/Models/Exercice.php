@@ -11,12 +11,12 @@ class Exercice extends Model
     protected $fillable = [
         'nb_question',
         'categorie',
-        'Cls_id'
+        'Cours_id'
     ];
     public function questions(){
         return $this->hasMany('App\Models\Question', 'id','Exer_id');
     }
-    public function classes(){
-        return $this->belongsTo('App\Models\Classe','Cls_id','id');
+    public function cours(){
+        return $this->belongsTo('App\Models\Cours', 'Cours_id', 'id');
     }
 }
