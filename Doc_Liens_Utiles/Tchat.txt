@@ -1,0 +1,9 @@
+19/05/2021
+J'ai rajouter une tables cours et dynamiser la page mes cours, j'ai mit en place les contrlleurs et tout,
+J'ai fixer plusieurs bugs et traduit le fichier validation php qui affiche les erreurs donc tout est en français
+Donc pour faire bref un étudiant n'a accés que au cours de ça classe(j'ai pas encore modifier la relation de l'étudiant à plusieurs classe mais c'est simple à faire)
+donc Cours -> exercices(nb_question et catégorie)(pas encore implémnter) -> questions(selon la catégorie de l'exo)
+on doit rajouter des outils au prof à chacune des ses pages pour ajouter supprimer/ on fait ça dans les controller
+comme j'ai fait sur la page gestion des utilisateur.
+j'ai fini l'ipmplémentation de la bdd il manque juste à modifier la relation(étudiant peut avoir plusieurs classes)
+Faudra aussi ajuster l'affichage dans cours.blade.php, j'ai rajouter des middelware et des routes aussi

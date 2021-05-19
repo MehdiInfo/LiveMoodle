@@ -22,14 +22,21 @@
         </div>
     </x-slot>
 
-        <div class="py-12">
+        <div class="py-12  ">
+             <div class="md:px-8">
+             
+                <button class="bg-gray-500 hover:bg-red-400 text-gray-300 font-bold py-2 px-8  border border-red-400 rounded ">
+                    Rajouter une question
+                </button>
 
+              </div>
             <div class="w-1/3 mx-auto sm:px-6 lg:px-8">
                 <div class="body-card">
 
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
+
                                 <table class="table table-bordered mt-5">
                                     <thead>
                                         <tr>
