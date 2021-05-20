@@ -53,9 +53,9 @@
                         <select name="Classe_id" wire:model="Classe_id" class="form-control" id="exampleFormControlInput4" required>
                             <option value="4"></option>
                             <option value="3" >Aucun groupe</option>
-                            <option value="0" >S4F5A</option>
-                            <option value="1">S4F5B</option>
-                            <option value="2">S4F5C</option>
+                            <option value="0" >TYPEQUESTION 1</option>
+                            <option value="1">TYPE QUESTION 2</option>
+                            <option value="2">TYPE QUESTION 3 </option>
                         </select>
 
                     FIN TYPE DE QUESTION -->
