@@ -25,9 +25,59 @@
         <div class="py-12  ">
              <div class="md:px-8">
              
-                <button class="bg-gray-500 hover:bg-red-400 text-gray-300 font-bold py-2 px-8  border border-red-400 rounded ">
-                    Rajouter une question
+             <div class="col text-center">
+                    <button type="button" class="btn btn-secondary" style="" data-toggle="modal" data-target="#exampleModal">
+	                        Rajouter une question
+                    </button>
+            </div>
+
+
+
+            <div wire:ignore.self class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Rajouter une question</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true close-btn">×</span>
                 </button>
+            </div>
+           <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Question</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Question" wire:model="name">
+                        @error('name') <span class="text-danger error">{{ $message }}</span>@enderror
+                    </div>
+                   <!-- TYPE DE QUESTION 
+                        <select name="Classe_id" wire:model="Classe_id" class="form-control" id="exampleFormControlInput4" required>
+                            <option value="4"></option>
+                            <option value="3" >Aucun groupe</option>
+                            <option value="0" >S4F5A</option>
+                            <option value="1">S4F5B</option>
+                            <option value="2">S4F5C</option>
+                        </select>
+
+                    FIN TYPE DE QUESTION -->
+
+
+                        @error('Classe_id') <span class="text-danger error">{{ $message }}</span>@enderror
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Fermer</button>
+                <button type="button" wire:click.prevent="store()" class="btn btn-primary close-modal">Sauvegarder les modifications</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 
               </div>
             <div class="w-1/3 mx-auto sm:px-6 lg:px-8">
