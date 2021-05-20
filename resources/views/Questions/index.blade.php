@@ -25,59 +25,7 @@
         <div class="py-12  ">
              <div class="md:px-8">
              
-             <div class="col text-center">
-                    <button type="button" class="btn btn-secondary" style="" data-toggle="modal" data-target="#exampleModal">
-	                        Rajouter une question
-                    </button>
-            </div>
-
-
-
-            <div wire:ignore.self class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Rajouter une question</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                     <span aria-hidden="true close-btn">×</span>
-                </button>
-            </div>
-           <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Question</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Question" wire:model="name">
-                        @error('name') <span class="text-danger error">{{ $message }}</span>@enderror
-                    </div>
-                   <!-- TYPE DE QUESTION 
-                        <select name="Classe_id" wire:model="Classe_id" class="form-control" id="exampleFormControlInput4" required>
-                            <option value="4"></option>
-                            <option value="3" >Aucun groupe</option>
-                            <option value="0" >TYPEQUESTION 1</option>
-                            <option value="1">TYPE QUESTION 2</option>
-                            <option value="2">TYPE QUESTION 3 </option>
-                        </select>
-
-                    FIN TYPE DE QUESTION -->
-
-
-                        @error('Classe_id') <span class="text-danger error">{{ $message }}</span>@enderror
-                    </div>
-                    
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Fermer</button>
-                <button type="button" wire:click.prevent="store()" class="btn btn-primary close-modal">Sauvegarder les modifications</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
+               
 
               </div>
             <div class="w-1/3 mx-auto sm:px-6 lg:px-8">
@@ -103,8 +51,38 @@
                                                 <td>
                                                     {{ $question->contenu ?? '' }}
                                                 </td>
+                                                
+                                                   <td>
+                                                      <!-- croix de suppression -->
+                                                      <button class=" ">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  class="bi bi-x-octagon " viewBox="0 0 16 16">
+                                                             <path d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1H5.1z"/>
+                                                             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                                        </svg>
+                                                      </button>
+
+
+                                                   </td>
                                             </tr>
+                                           
                                         @endforeach
+                                                
+                                             
+                                                
+                                                <tr>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                    <input type="text" name="Envoiquestion" class="w-full"/>
+                                                    
+                                                    <!-- Croix de validation -->
+                                                   </td>
+                                                   <td>
+                                                   <button class="bg-gray-500 hover:bg-red-400 text-gray-300 font-bold py-2 px-8  border border-red-400 rounded ">
+                                                        Rajouter une question
+                                                    </button>
+                                                </td>
+                                                </tr>
                                     </tbody>
                                 </table>
                             </div>

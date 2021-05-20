@@ -51,6 +51,15 @@ class QuestionController extends Controller
     public function store(Request $request)
     {
         //
+
+        dd($request->all());
+        
+        
+        $contenu_question = $request->contenu_question;
+
+       Question::create($contenu_question);
+       return index();
+
     }
 
     /**
