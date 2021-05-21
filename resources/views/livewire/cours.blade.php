@@ -1,4 +1,6 @@
-<div>
+<div class="col text-center">
+    @include('livewire.RajoutExo')
+
     @foreach ($Cours as $uncours)
                     <br>
                             <div class=" content-evenly w-1/1 overflow-hidden shadow-xl sm:rounded-lg bg-gray-400">
@@ -24,3 +26,6 @@
 
     @endforeach
 </div>
+<br>
+{{ $Cours->links('vendor.pagination.simple-tailwind') }}
+

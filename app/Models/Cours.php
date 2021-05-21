@@ -8,10 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Cours extends Model
 {
     use HasFactory;
-    protected $filable=[
-        'title_cours',
-        'Cls_id',
-    ];
+    protected $guarded = [];
     public function classes(){
         return $this->belongsTo('App\Models\Classe','Cls_id','id');
     }
