@@ -17,6 +17,7 @@ class CreateAnnoncesTable extends Migration
             $table->id();
             $table->string('message');
             $table->timestamps();
+            $table->string('createur');
         });
     }
 

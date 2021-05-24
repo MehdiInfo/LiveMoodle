@@ -61,12 +61,32 @@
 
 
 <body>
-    <section class="container">
         <main class="row">
 
-        <div class="col-12 my-1">
-            <div class="p-2 h-96 shadow-xl overflow-y-scroll bg-gray-400 border-4 border-gray-500" id="ANNONCES" >
+              <div class="col-12 my-1">
+                  <div class="p-2 h-96 shadow-xl overflow-y-scroll bg-gray-400 border-4 border-gray-500" id="ANNONCES" >
+                
+
             -> Crée le 27/04/2021
+                     
+            <br>
+    
+            @foreach($data as $msg)
+            <br>
+
+              {{ $msg->created_at    }} 
+               {{ $msg->createur  }} :
+               {{ $msg->message }}
+               
+            
+            @endforeach
+
+            
+                
+                            
+
+
+
         </div>
     </div>
 <div class="col-12 saisie">
@@ -110,6 +130,8 @@
         </div>
     </div>
 </div>
+
+</body>
 </html>
 
             </div>

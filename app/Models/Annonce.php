@@ -10,12 +10,5 @@ class Annonce extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'statut',
-        'Classe_id',
-        'Etab_id',
-    ];
+  protected $guarded=[];
 }
