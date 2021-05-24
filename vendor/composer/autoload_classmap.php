@@ -2743,7 +2743,6 @@ return array(
     'Livewire\\Exceptions\\BypassViewHandler' => $vendorDir . '/livewire/livewire/src/Exceptions/BypassViewHandler.php',
     'Livewire\\Exceptions\\CannotBindToModelDataWithoutValidationRuleException' => $vendorDir . '/livewire/livewire/src/Exceptions/CannotBindToModelDataWithoutValidationRuleException.php',
     'Livewire\\Exceptions\\CannotUseReservedLivewireComponentProperties' => $vendorDir . '/livewire/livewire/src/Exceptions/CannotUseReservedLivewireComponentProperties.php',
-    'Livewire\\Exceptions\\ComponentAttributeMissingOnDynamicComponentException' => $vendorDir . '/livewire/livewire/src/Exceptions/ComponentAttributeMissingOnDynamicComponentException.php',
     'Livewire\\Exceptions\\ComponentNotFoundException' => $vendorDir . '/livewire/livewire/src/Exceptions/ComponentNotFoundException.php',
     'Livewire\\Exceptions\\CorruptComponentPayloadException' => $vendorDir . '/livewire/livewire/src/Exceptions/CorruptComponentPayloadException.php',
     'Livewire\\Exceptions\\DirectlyCallingLifecycleHooksNotAllowedException' => $vendorDir . '/livewire/livewire/src/Exceptions/DirectlyCallingLifecycleHooksNotAllowedException.php',

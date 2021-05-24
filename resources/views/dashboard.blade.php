@@ -71,11 +71,24 @@
     </div>
 <div class="col-12 saisie">
 
+
 @php
                 $Utilisateur = Auth::user()->statut;
                 @endphp
                 @if ($Utilisateur == 'Prof')
 
+                <form action="" method="POST">
+                    @csrf 
+                    <div class="w-full">
+                        <input class="w-3/4 rounded bg-gray-400" type="texte" name="annonce" placeholder="Entrez une nouvelle annonce visible par tous les internautes..."> 
+                        <button class="w-1/4 bg-gray-400 rounded"  type="submit"> Ajouter une annonce </button>
+                    </div>
+                  
+                </form>
+             
+
+
+<!--
     <div class="input-group">
         <input wire:model="message" type="text" class="form-control" id="texte" placeholder="Entrez une nouvelle annonce visible par tous les internautes...">
         <div class="input-group-append">
@@ -83,6 +96,7 @@
         </div>
     </div>
 
+-->
 
     
 @endif
