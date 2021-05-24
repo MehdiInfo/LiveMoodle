@@ -1,5 +1,5 @@
 <div class="col text-center">
-    @include('livewire.RajoutExo')
+    @include('livewire.RajoutCours')
 
     @foreach ($Cours as $uncours)
                     <br>
@@ -17,7 +17,7 @@
                                     </h1>
 
                                 </div>
-                                <button onclick="window.location='{{ route('Question') }}'"
+                                <button onclick="window.location='{{ route('Exercice', $uncours->id) }}'"
                                         class="w-full bg-gray-700 pt-5 w-1/5 px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-200 transform bg-white  focus:bg-gray-400 focus:outline-none">
                                         Exercices
                                 </button>

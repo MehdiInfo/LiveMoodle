@@ -16,6 +16,11 @@ class QuestionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+
+    }
     public function index()
     {
         if(Auth::user()->statut == "Prof"){
@@ -50,15 +55,6 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        //
-
-        dd($request->all());
-        
-        
-        $contenu_question = $request->contenu_question;
-
-       Question::create($contenu_question);
-       return index();
 
     }
 

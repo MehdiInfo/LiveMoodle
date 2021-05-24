@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ClasseSeeder::class);
         $this->call(EtablissementSeeder::class);
         $this->call(CoursSeeder::class);
+        $this->call(ExerciceSeeder::class);
 
         /**$this->call(EtablissementSeeder::class);
         *<--$this->call([

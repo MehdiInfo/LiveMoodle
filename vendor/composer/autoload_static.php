@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc2e0624e45cb8de6b5c5308cbd5ccc2f
+class ComposerStaticInit497cc6d569af91004fc1ff81aaf08070
 {
     public static $files = array (
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
@@ -602,13 +602,23 @@ class ComposerStaticInitc2e0624e45cb8de6b5c5308cbd5ccc2f
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Admin\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/UsersController.php',
+        'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
+        'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
+        'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
+        'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
+        'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
+        'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\CoursController' => __DIR__ . '/../..' . '/app/Http/Controllers/CoursController.php',
+        'App\\Http\\Controllers\\ExerciceController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExerciceController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\Prof\\UsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/Prof/UsersController.php',
         'App\\Http\\Controllers\\QuestionController' => __DIR__ . '/../..' . '/app/Http/Controllers/QuestionController.php',
         'App\\Http\\Controllers\\VotreClasse' => __DIR__ . '/../..' . '/app/Http/Controllers/VotreClasse.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Livewire\\Chat' => __DIR__ . '/../..' . '/app/Http/Livewire/Chat.php',
+        'App\\Http\\Livewire\\Cours' => __DIR__ . '/../..' . '/app/Http/Livewire/Cours.php',
+        'App\\Http\\Livewire\\Exercices' => __DIR__ . '/../..' . '/app/Http/Livewire/Exercices.php',
         'App\\Http\\Livewire\\Search' => __DIR__ . '/../..' . '/app/Http/Livewire/Search.php',
         'App\\Http\\Livewire\\Users' => __DIR__ . '/../..' . '/app/Http/Livewire/Users.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -855,6 +865,7 @@ class ComposerStaticInitc2e0624e45cb8de6b5c5308cbd5ccc2f
         'Database\\Seeders\\CoursSeeder' => __DIR__ . '/../..' . '/database/seeders/CoursSeeder.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'Database\\Seeders\\EtablissementSeeder' => __DIR__ . '/../..' . '/database/seeders/EtablissementSeeder.php',
+        'Database\\Seeders\\ExerciceSeeder' => __DIR__ . '/../..' . '/database/seeders/ExerciceSeeder.php',
         'Database\\Seeders\\QuestionSeeder' => __DIR__ . '/../..' . '/database/seeders/QuestionSeeder.php',
         'Database\\Seeders\\RolesTableSeeder' => __DIR__ . '/../..' . '/database/seeders/RolesTableSeeder.php',
         'Database\\Seeders\\UsersTableSeeder' => __DIR__ . '/../..' . '/database/seeders/UsersTableSeeder.php',
@@ -5809,10 +5820,10 @@ class ComposerStaticInitc2e0624e45cb8de6b5c5308cbd5ccc2f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc2e0624e45cb8de6b5c5308cbd5ccc2f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc2e0624e45cb8de6b5c5308cbd5ccc2f::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitc2e0624e45cb8de6b5c5308cbd5ccc2f::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitc2e0624e45cb8de6b5c5308cbd5ccc2f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit497cc6d569af91004fc1ff81aaf08070::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit497cc6d569af91004fc1ff81aaf08070::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit497cc6d569af91004fc1ff81aaf08070::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit497cc6d569af91004fc1ff81aaf08070::$classMap;
 
         }, null, ClassLoader::class);
     }

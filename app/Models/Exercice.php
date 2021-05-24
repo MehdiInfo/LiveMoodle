@@ -8,11 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Exercice extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'nb_question',
-        'categorie',
-        'Cours_id'
-    ];
+    protected $guarded = [];
     public function questions(){
         return $this->hasMany('App\Models\Question', 'id','Exer_id');
     }
