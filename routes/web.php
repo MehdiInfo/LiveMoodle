@@ -3,6 +3,7 @@
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\CoursController;
 use App\Http\Controllers\ExerciceController;
+use App\Http\Controllers\annonceController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Livewire;
@@ -56,10 +57,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     ]);
 });
 //Route::get('/exercice/{id}', [ExerciceController::class, 'index'])->name('Exercice');
+
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('exercice/{id}', ExerciceController::class)->names([
         'index' => 'Exercice'
     ]);
 });
 
+
 // Route::post('test','QuestionController@store');
+
+
+Route::post('dashboard',[annonceController::class,'addAnnonce']);

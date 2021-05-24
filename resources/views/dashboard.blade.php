@@ -77,8 +77,8 @@
                 @endphp
                 @if ($Utilisateur == 'Prof')
 
-                <form action="" method="POST">
-                    @csrf 
+                <form action="dashboard" method="POST" >
+                @csrf
                     <div class="w-full">
                         <input class="w-3/4 rounded bg-gray-400" type="texte" name="annonce" placeholder="Entrez une nouvelle annonce visible par tous les internautes..."> 
                         <button class="w-1/4 bg-gray-400 rounded"  type="submit"> Ajouter une annonce </button>
