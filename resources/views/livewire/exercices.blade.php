@@ -1,10 +1,14 @@
 <div class="col text-center">
-    @include('livewire.RajoutExos')
+    @if (Auth::user()->statut == "Prof")
+        @include('livewire.RajoutExos')
+    @endif
+
    @foreach ($exer as $exo)
                     <br>
                             <div class=" content-evenly overflow-hidden shadow-xl sm:rounded-lg bg-gray-400" >
-
-                                <button wire:click="delete({{ $exo->id }})" class="btn btn-danger btn-sm" style="text-align: center">&#10060</button>
+                                @if (Auth::user()->statut == "Prof")
+                                    <button wire:click="delete({{ $exo->id }})" class="btn btn-danger btn-sm" style="text-align: center">&#10060</button>
+                                @endif
                                 <div class="px-4 py-2">
                                     <h1 class="text-3xl font-bold text-gray-800 uppercase dark:text-white text-center">
                                         {{$exo->Categorie}}

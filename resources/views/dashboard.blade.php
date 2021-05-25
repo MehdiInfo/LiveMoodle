@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{URL::asset('css/bootstrap.min.css')}}" type="text/css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <script type="text/javascript" src="{{URL::asset('\js\scripts.js')}}"></script>
-    <title>Mon chat</title>
+    <title>Accueil</title>
 </head>
 
 <x-app-layout>
@@ -47,7 +47,7 @@
             <div class="bg-gray-900 overflow-hidden shadow-xl sm:rounded-lg">
 
              <!--   <x-jet-welcome />-->
-    
+
 
 
     <div class="p-6 sm:px-20 bg-gray-900 border-b border-gray-500">
@@ -65,25 +65,25 @@
 
               <div class="col-12 my-1">
                   <div class="p-2 h-96 shadow-xl overflow-y-scroll bg-gray-400 border-4 border-gray-500" id="ANNONCES" >
-                
+
 
             -> Crée le 27/04/2021
-                     
+
             <br>
-    
+
             @foreach($data as $msg)
             <br>
 
-              {{ $msg->created_at    }} 
+              {{ $msg->created_at    }}
                {{ $msg->createur  }} :
                {{ $msg->message }}
-               
-            
+
+
             @endforeach
 
-            
-                
-                            
+
+
+
 
 
 
@@ -100,12 +100,12 @@
                 <form action="dashboard" method="POST" >
                 @csrf
                     <div class="w-full">
-                        <input class="w-3/4 rounded bg-gray-400" type="texte" name="annonce" placeholder="Entrez une nouvelle annonce visible par tous les internautes..."> 
+                        <input class="w-3/4 rounded bg-gray-400" type="texte" name="annonce" placeholder="Entrez une nouvelle annonce visible par tous les internautes...">
                         <button class="w-1/4 bg-gray-400 rounded"  type="submit"> Ajouter une annonce </button>
                     </div>
-                  
+
                 </form>
-             
+
 
 
 <!--
@@ -118,14 +118,14 @@
 
 -->
 
-    
+
 @endif
 </div>
 
 
         <div class="ml-12">
             <div class="mt-2 text-sm text-gray-500">
-        
+
             </div>
         </div>
     </div>

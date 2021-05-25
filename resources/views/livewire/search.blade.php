@@ -39,7 +39,7 @@
                 @endforeach
             </table>
 
-            {{ $users->links() }}
+            {{ $users->links('vendor.livewire.tailwind') }}
         </div>
     </div>
 </div>

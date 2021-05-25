@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\Exercice;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Classe;
+use Livewire\WithPagination;
 
 class CoursController extends Controller
 {
@@ -17,8 +18,10 @@ class CoursController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
+
         if(Auth::user()->statut == "Prof"){
             $Cours = Cours::all();
             $groupes = Classe::get('title')->all();

@@ -14,14 +14,14 @@ class Cours extends Component
     public function render()
     {
         if(Auth::user()->statut == "Prof"){
-            $Cours = Appcours::paginate(4);
+            $Cours = Appcours::paginate(5);
             $groupes = Classe::get('title')->all();
             return view('livewire.cours', compact ('Cours', 'groupes'));
 
         }
        else{
         $c_user = Auth::user()->Classe_id;
-        $Cours = Appcours::where('Cls_id', $c_user)->paginate(4);
+        $Cours = Appcours::where('Cls_id', $c_user)->paginate(5);
         return view('livewire.cours', compact ('Cours'));}
     }
     public function delete($id){
