@@ -49,7 +49,7 @@
                  <div class="card-header">
 
                  </div>
-                <div class="card-body message-box" wire:poll="mount">
+                <div class="card-body message-box" >
                     <div class="single-message">
                         <p class="font-weight-bolder my-0"> name </p>
                         message
