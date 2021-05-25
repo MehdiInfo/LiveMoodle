@@ -15,7 +15,7 @@ Dans le cadre d'un projet professionnel on doit réaliser une application web se
 	php artisan DB:seed (permet la population de la bdd pour faciliter les test)
     composer require barryvdh/laravel-debugbar --dev
 	vous pouvez vous connecter à l'application web en créant un compte ou bien en utilisant le
-	compte pré difini prof@prof.com - password / etudiant@etudiant.com - password (accès limité)
+	compte pré défini prof@prof.com - password / etudiant@etudiant.com - password (accès limité)
 	localhost/phpmyadmin user: root - mdp :(vide)
 	
 
