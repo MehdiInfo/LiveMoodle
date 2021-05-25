@@ -5,6 +5,7 @@ use App\Http\Controllers\CoursController;
 use App\Http\Controllers\ExerciceController;
 use App\Http\Controllers\annonceController;
 use App\Models\Annonce;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Livewire;
@@ -49,10 +50,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     ]);
 });
 
+Route::view('/chat','users.messages');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/tchat', function () {
-    return view('tchat');
+    $users=User::get();
+    return view('livewire/messages',compact('users'));
 })->name('tchat');
+
+
 
 Route::namespace('Prof')->prefix('prof')->name('prof.')->group(function(){
     Route::resource('users','\App\Http\Controllers\Prof\UsersController');
